@@ -177,8 +177,8 @@ Convert a line to a string. Line may be an object, an array or a string.
             # Cast date to timestamp string
             field = '' + field.getTime()
           else if typeof field is 'object' and field isnt null
-            # Stringify anything else as JSON
-            field = JSON.stringify field
+            # Stringify anything else as string
+            field = field.toString()
           if field
             containsdelimiter = field.indexOf(delimiter) >= 0
             containsQuote = field.indexOf(quote) >= 0
